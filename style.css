@@ -11,8 +11,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: grid; 
+    background-attachment: fixed; 
 }
 
 .container {
@@ -165,81 +164,17 @@ body {
     border-radius:5px;
 }
 
-@media(max-width:768px){
-
-    .hamburger{
-        display:flex;
-    }
-
-    .nav-links{
-        display:none;
-
-        position:absolute;
-        top:70px;
-        right:20px;
-
-        width:220px;
-
-        background:#08101f;
-
-        padding:20px;
-
-        border-radius:15px;
-
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-    }
-
-    .hero-content{
-        width:100%;
-    }
-
-    .hero-image{
-        width:100%;
-    }
-
-    .hero-content h1{
-        font-size:38px;
-    }
-
-    .cylinder-frame{
-        width:260px;
-        height:400px;
-    }
-
-    .ring1{
-        width:290px;
-        height:430px;
-    }
-
-    .ring2{
-        width:320px;
-        height:460px;
-    }
-}
 
 /*home section*/
 
 .hero {
-    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
     min-height: 100vh;
-    margin-top: -80px;
-    padding-left: 10%;
-    padding-top: 0;
-
+    padding: 80px 5%;
+    color: white;
+    gap: 50px;
 }
 
 .hero-content {
@@ -505,12 +440,10 @@ body {
 }
 
 .education-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
-    flex-wrap: nowrap;
     margin-top: 50px;
-    margin-left: -30px;
 }
 
 .education-card {
@@ -607,16 +540,6 @@ body {
     font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-
-    .section-title h2 {
-        font-size: 2.8rem;
-    }
-
-    .education {
-        padding: 80px 5%;
-    }
-}
 
 /*skills section*/
 
@@ -691,11 +614,6 @@ body {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* Projects Section */
 .projects {
@@ -822,20 +740,6 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .projects {
-        padding: 80px 5%;
-    }
-
-    .section-header h2 {
-        font-size: 2.8rem;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-}
-
 /*contact*/
 
 .contact {
@@ -930,7 +834,7 @@ body {
 
 .input-group input,
 .input-group textarea {
-    width: 90%;
+    width: 100%;
     padding: 15px;
     border-radius: 12px;
     border: 1px solid rgba(59,130,246,.2);
@@ -939,7 +843,7 @@ body {
 }
 
 .contact-btn {
-    width: 97%;
+    width: 100%;
     padding: 15px;
     border: none;
     border-radius: 12px;
@@ -960,10 +864,8 @@ body {
 /* Footer */
 
 .footer {
-    background:  #0b1324;
-    padding: 30px 8% 20px;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    background:#0b1324;
+    padding:30px 8% 20px;
 }
 
 .footer-container {
@@ -1014,14 +916,6 @@ body {
     color: #94a3b8;
 }
 
-@media(max-width:768px){
-
-    .contact-container,
-    .footer-container{
-        grid-template-columns:1fr;
-    }
-}
-
 /* Hamburger Menu */
 
 .hamburger{
@@ -1038,9 +932,7 @@ body {
     border-radius:5px;
 }
 
-/* Mobile */
-
-@media(max-width:768px){
+@media screen and (max-width:768px){
 
     .hamburger{
         display:flex;
@@ -1049,40 +941,23 @@ body {
     .nav-links{
         display:none;
         position:absolute;
-        top:80px;
+        top:70px;
         right:20px;
 
         width:220px;
-
         background:#08101f;
 
         padding:20px;
-
         border-radius:15px;
 
         flex-direction:column;
         gap:15px;
 
-        box-shadow:0 0 20px rgba(0,0,0,.4);
+        z-index:1000;
     }
 
     .nav-links.active{
         display:flex;
-    }
-
-    .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-        gap:30px;
-    }
-
-    .hero-content,
-    .hero-image{
-        width:100%;
-    }
-
-    .hero-content h1{
-        font-size:38px;
     }
 }
 
@@ -1111,9 +986,9 @@ body {
     }
 
     .projects-container{
-        grid-template-columns: 1fr;
+    flex-direction:column;
+    align-items:center;
     }
-
     .contact-container{
         grid-template-columns: 1fr;
     }
@@ -1163,6 +1038,10 @@ body {
     .ring2{
         width: 310px;
         height: 440px;
+    }
+
+    .education-container{
+    grid-template-columns:1fr;
     }
 
     .skills-container{
