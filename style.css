@@ -868,18 +868,10 @@ body {
 
 .footer{
     background:#0b1324;
-
-    position:relative;
-    left:50%;
-    right:50%;
-
-    margin-left:-50vw;
-    margin-right:-50vw;
-
-    width:100vw;
-
+    width:100%;
     padding:60px 5%;
     box-sizing:border-box;
+    margin:0;
 }
 
 .footer-container {
@@ -1141,4 +1133,14 @@ body {
     max-width:350px;
     margin:0 auto;
 }
+}
+
+body{
+    margin:0;
+}
+
+.footer{
+    display:block;
+    width:100%;
+    max-width:none;
 }
